@@ -1,0 +1,33 @@
+spring:
+  # 개발용 데이터베이스 설정
+  datasource:
+    url: jdbc:postgresql://localhost:5432/syncband
+    username: postgres
+    password: gg940701
+    driver-class-name: org.postgresql.Driver
+  
+  # 개발용 JPA 설정
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+# 개발용 로깅 설정
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    com.syncband: DEBUG
+
+# 개발용 파일 업로드 경로 설정
+file:
+  upload-dir: uploads/dev
+
+# JWT 설정 (개발용)
+jwt:
+  expiration: 86400000  # 24시간

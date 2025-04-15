@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color: 79, 70, 229; /* indigo-600 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  /* 커스텀 유틸리티 클래스 추가 */
+  .text-primary {
+    color: rgb(var(--primary-color));
+  }
+  
+  .bg-primary {
+    background-color: rgb(var(--primary-color));
+  }
+  
+  .border-primary {
+    border-color: rgb(var(--primary-color));
+  }
+  
+  .ring-primary {
+    --tw-ring-color: rgb(var(--primary-color));
+  }
+  
+  .hover\:bg-primary:hover {
+    background-color: rgb(var(--primary-color));
+  }
+  
+  .hover\:text-primary:hover {
+    color: rgb(var(--primary-color));
+  }
+  
+  .bg-primary\/10 {
+    background-color: rgba(var(--primary-color), 0.1);
+  }
+  
+  .bg-primary\/90 {
+    background-color: rgba(var(--primary-color), 0.9);
+  }
+  
+  .hover\:bg-primary\/90:hover {
+    background-color: rgba(var(--primary-color), 0.9);
+  }
+  
+  .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

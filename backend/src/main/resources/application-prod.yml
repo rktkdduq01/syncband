@@ -1,0 +1,53 @@
+spring:
+  # 운영용 데이터베이스 설정
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:syncband}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  
+  # 운영용 JPA 설정
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: false
+    show-sql: false
+
+  # 운영용 파일 업로드 설정
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+# 운영용 로깅 설정
+logging:
+  level:
+    root: WARN
+    org.springframework.web: INFO
+    org.hibernate: WARN
+    com.syncband: INFO
+  file:
+    name: ${LOG_PATH:/logs}/syncband.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# 운영용 파일 업로드 경로 설정
+file:
+  upload-dir: ${UPLOAD_DIR:/uploads/prod}
+
+# JWT 설정 (운영용)
+jwt:
+  secret: ${JWT_SECRET:syncband_secure_key_for_jwt_token_please_change_in_production}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+# 서버 설정
+server:
+  port: ${SERVER_PORT:8080}
+  tomcat:
+    max-threads: 200
+    max-connections: 10000
+    accept-count: 100
+    connection-timeout: 5000

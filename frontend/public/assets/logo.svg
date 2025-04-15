@@ -1,0 +1,11 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="20" fill="#4F46E5"/>
+  <path d="M30 65C30 57.268 36.268 51 44 51C51.732 51 58 57.268 58 65C58 72.732 51.732 79 44 79C36.268 79 30 72.732 30 65Z" fill="white"/>
+  <path d="M50 25C50 22.791 51.791 21 54 21H70C72.209 21 74 22.791 74 25V65C74 67.209 72.209 69 70 69H54C51.791 69 50 67.209 50 65V25Z" fill="white"/>
+  <path d="M30 35C30 32.791 31.791 31 34 31H40C42.209 31 44 32.791 44 35V45C44 47.209 42.209 49 40 49H34C31.791 49 30 47.209 30 45V35Z" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M60 25C60 22.791 61.791 21 64 21H70C72.209 21 74 22.791 74 25V65C74 67.209 72.209 69 70 69H64C61.791 69 60 67.209 60 65V25ZM64 25H70V65H64V25Z" fill="#4F46E5"/>
+  <path d="M15 35C15 30 19 25 24 25H30V45H24C19 45 15 40 15 35Z" fill="white"/>
+  <rect x="74" y="31" width="11" height="4" rx="2" fill="white"/>
+  <rect x="74" y="41" width="11" height="4" rx="2" fill="white"/>
+  <rect x="74" y="51" width="11" height="4" rx="2" fill="white"/>
+</svg>
